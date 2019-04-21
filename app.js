@@ -25,17 +25,6 @@ app.get('/spin', (req, res) => {
     res.status(200).send({ message: 'Wheel Spinned' });
 });
 
-app.get('/wheelResults', (req, res) => {
-
-    var options = {
-        host: 'localhost',
-        port: 3000,
-        path: '/spin',
-        method: 'GET'
-    };
-    _http.request(options, function (_res) {
-        _res.on('data', function (chunk) {
-            res.status(200).send({ message: _result });
-        })
-    }).end();
+app.get('/result', (req, res) => {
+    res.status(200).send({ message: _result });
 });
