@@ -2,7 +2,7 @@
 A roulette created for TGH tokens to be spinned.
 
 ## Setup
-Start the Download all the node Dependencies using 
+Download all the node Dependencies using 
 
 ```$ npm install```
 
