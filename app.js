@@ -17,9 +17,7 @@ http.listen(3000, function () {
 // Run once, on first time (to init socket)
 io.on('connection', function (socket) {
     // Run everytime after the result is generated
-    //console.log("outside spin")
     socket.on('spin', function (msg, index) {
-        //console.log("Here now!")
         _result = msg;
         console.log("Result: ", _result);
         if(_res[parseInt(index, 10)]) {
@@ -33,14 +31,10 @@ io.on('connection', function (socket) {
 app.get('/spin', (req, res) => {
     _res.push(res)
     io.emit('spin', ''+_res.length-1);
-    //console.log("Request generated to spin!") 
-    //res.status(200).send({ message: "wheel spun" });
 });
 
 app.get('/result', (req, res) => {
-
     res.status(200).send({ message: _result });
-            
 });
 
 
