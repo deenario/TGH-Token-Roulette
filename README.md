@@ -16,9 +16,5 @@ Go to ```http://localhost:3000```
 ## Spin the Wheel
 Call the API
 
-```http://localhost:3000/spin``` to spin the wheel
+```http://localhost:3000/spin``` to spin the wheel and get results. 
 
-## Get results after the Spin
-Cal the API
-
-```http://localhost:3000/result``` to get the result once the wheel is done spinning.
